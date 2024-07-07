@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=3 uid="uid://c73eh8qlloqns"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_h53i0"]
+
+[sub_resource type="SystemFont" id="SystemFont_6sql0"]
+font_names = PackedStringArray("Engravers MT")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lwqs"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0354088, 0.00508635, 0.0822744, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eowpa"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0354088, 0.00508635, 0.0822744, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.552941, 0.313726, 0.145098, 0.784314)
+shadow_size = 2
+shadow_offset = Vector2(-4, 2)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h53i0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.5
+offset_top = -69.0
+offset_right = 166.5
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Line1" type="Label" parent="Title"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.202175, 0.485038, 0.917723, 0.784314)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = SubResource("SystemFont_6sql0")
+theme_override_font_sizes/font_size = 50
+text = "Speech &"
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="Line2" type="Label" parent="Title"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.68249, 0.0802228, 0.268612, 0.784314)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = SubResource("SystemFont_6sql0")
+theme_override_font_sizes/font_size = 64
+text = "Debate"
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="Actions" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -262.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Actions"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Start" type="Button" parent="Actions/Buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2lwqs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eowpa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eowpa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eowpa")
+text = "Start"
+
+[node name="Exit" type="Button" parent="Actions/Buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2lwqs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eowpa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eowpa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eowpa")
+text = "Exit
+"
