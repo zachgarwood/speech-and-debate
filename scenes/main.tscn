@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://pcccvrvhbhja"]
+
+[ext_resource type="Script" path="res://scenes/TextContainer.gd" id="1_r3xiu"]
+[ext_resource type="Resource" uid="uid://4b7lex7rslmj" path="res://inks/story.ink" id="2_xon3g"]
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0.388235, 1, 1)
+
+[node name="TextContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+script = ExtResource("1_r3xiu")
+story = ExtResource("2_xon3g")
